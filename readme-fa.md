@@ -24,12 +24,13 @@
 
 - **تمرکز روی x-ui**  
   بکاپ‌گیری از فایل‌های اصلی دیتابیس x-ui:
-
-  <ul dir="ltr">
-    <li><code>/etc/x-ui/x-ui.db</code></li>
-    <li><code>/etc/x-ui/x-ui.db-wal</code></li>
-    <li><code>/etc/x-ui/x-ui.db-shm</code></li>
-  </ul>
+  <div dir="ltr" align="left">
+    <ul dir="ltr">
+      <li><code>/etc/x-ui/x-ui.db</code></li>
+      <li><code>/etc/x-ui/x-ui.db-wal</code></li>
+      <li><code>/etc/x-ui/x-ui.db-shm</code></li>
+    </ul>
+  </div>
 
 - **زمان‌بندی خودکار**
 
