@@ -395,15 +395,29 @@ if [ ! -f "\${XUI_DB_DIR}/x-ui.db" ]; then
   exit 1
 fi
 
-# Compress files
-log "Creating backup archive: \${backup_name}"
-if ! zip -9 -r -s ${SPLIT_SIZE} "\$backup_name" \
-  "\${XUI_DB_DIR}/x-ui.db" \
-  "\${XUI_DB_DIR}/x-ui.db-wal" 2>/dev/null || true \
-  "\${XUI_DB_DIR}/x-ui.db-shm" 2>/dev/null || true; then
-    log "Failed to compress ${REMARK} files. Please check the server."
-    exit 1
+# Build file list (handle missing WAL/SHM safely)
+db_files=()
+
+for f in "\${XUI_DB_DIR}/x-ui.db" "\${XUI_DB_DIR}/x-ui.db-wal" "\${XUI_DB_DIR}/x-ui.db-shm"; do
+  if [ -f "\$f" ]; then
+    db_files+=("\$f")
+  fi
+done
+
+if [ "\${#db_files[@]}" -eq 0 ]; then
+  log "No x-ui database files found in \${XUI_DB_DIR}. Aborting."
+  exit 1
 fi
+
+log "Creating backup archive: \${backup_name}"
+log "Including files:"
+printf '  - %s\n' "\${db_files[@]}"
+
+if ! zip -9 -r -s ${SPLIT_SIZE} "\$backup_name" "\${db_files[@]}"; then
+  log "Failed to compress ${REMARK} files. Please check the server."
+  exit 1
+fi
+
 
 # Send backup files to Telegram
 if ls \${base_name}* > /dev/null 2>&1; then
