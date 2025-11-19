@@ -25,13 +25,14 @@
 - **تمرکز روی x-ui**  
   بکاپ‌گیری از فایل‌های اصلی دیتابیس x-ui:
 
-  - `/etc/x-ui/x-ui.db`
-  - `/etc/x-ui/x-ui.db-wal`
-  - `/etc/x-ui/x-ui.db-shm`
+  - <span dir="ltr">`/etc/x-ui/x-ui.db`</span>  
+  - <span dir="ltr">`/etc/x-ui/x-ui.db-wal`</span>  
+  - <span dir="ltr">`/etc/x-ui/x-ui.db-shm`</span>
 
 - **زمان‌بندی خودکار**
 
-  - ساخت اسکریپت اختصاصی بکاپ در مسیر `/root/_<remark>_backuper_script.sh`
+  - ساخت اسکریپت اختصاصی بکاپ در مسیر  
+    <span dir="ltr">`/root/_<remark>_backuper_script.sh`</span>
   - تنظیم خودکار **cron job** بر اساس بازه زمانی‌ای که انتخاب می‌کنید
 
 - **مدیریت امن فایل‌ها**
@@ -52,62 +53,70 @@
 <details>
 <summary><b>نمایش لیست رایج‌ترین timezone ها</b></summary>
 
+<p>
 برای وارد کردن مقدار timezone در مرحله تنظیمات NovaBackuper می‌توانید از این مثال‌ها استفاده کنید.
+</p>
 
-| منطقه            | کشور / شهر                 | Timezone (IANA)                  |
+<div dir="ltr" align="left">
+
+| Region           | Country / City              | Timezone (IANA)                  |
 | ---------------- | -------------------------- | -------------------------------- |
-| خاورمیانه        | ایران                      | `Asia/Tehran`                    |
-| خاورمیانه        | ترکیه                      | `Europe/Istanbul`                |
-| خاورمیانه        | عربستان سعودی              | `Asia/Riyadh`                    |
-| خاورمیانه        | امارات                     | `Asia/Dubai`                     |
-| خاورمیانه        | قطر                        | `Asia/Qatar`                     |
-| خاورمیانه        | عراق                       | `Asia/Baghdad`                   |
-| خاورمیانه        | اسرائیل                    | `Asia/Jerusalem`                 |
-| اروپا            | انگلستان (لندن)            | `Europe/London`                  |
-| اروپا            | آلمان (برلین)              | `Europe/Berlin`                  |
-| اروپا            | فرانسه (پاریس)             | `Europe/Paris`                   |
-| اروپا            | ایتالیا (رم)               | `Europe/Rome`                    |
-| اروپا            | اسپانیا (مادرید)           | `Europe/Madrid`                  |
-| اروپا            | هلند (آمستردام)            | `Europe/Amsterdam`               |
-| اروپا            | سوئد (استکهلم)             | `Europe/Stockholm`               |
-| اروپا            | نروژ (اسلو)                | `Europe/Oslo`                    |
-| اروپا            | روسیه (مسکو)               | `Europe/Moscow`                  |
-| قاره آمریکا      | آمریکا – شرق (نیویورک)     | `America/New_York`               |
-| قاره آمریکا      | آمریکا – مرکز (شیکاگو)     | `America/Chicago`                |
-| قاره آمریکا      | آمریکا – کوهستانی (دنور)   | `America/Denver`                 |
-| قاره آمریکا      | آمریکا – غرب (لس‌آنجلس)    | `America/Los_Angeles`            |
-| قاره آمریکا      | کانادا – شرق (تورنتو)      | `America/Toronto`                |
-| قاره آمریکا      | کانادا – غرب (ونکوور)      | `America/Vancouver`              |
-| قاره آمریکا      | برزیل (سائوپائولو)         | `America/Sao_Paulo`              |
-| قاره آمریکا      | آرژانتین (بوینس‌آیرس)      | `America/Argentina/Buenos_Aires` |
-| قاره آمریکا      | مکزیک (مکزیکوسیتی)         | `America/Mexico_City`            |
-| آسیا و اقیانوسیه | هند (کلکته)                | `Asia/Kolkata`                   |
-| آسیا و اقیانوسیه | پاکستان (کراچی)            | `Asia/Karachi`                   |
-| آسیا و اقیانوسیه | چین (شانگهای)              | `Asia/Shanghai`                  |
-| آسیا و اقیانوسیه | هنگ‌کنگ                    | `Asia/Hong_Kong`                 |
-| آسیا و اقیانوسیه | ژاپن (توکیو)               | `Asia/Tokyo`                     |
-| آسیا و اقیانوسیه | کره جنوبی (سئول)           | `Asia/Seoul`                     |
-| آسیا و اقیانوسیه | سنگاپور                    | `Asia/Singapore`                 |
-| آسیا و اقیانوسیه | اندونزی (جاکارتا)          | `Asia/Jakarta`                   |
-| آسیا و اقیانوسیه | استرالیا (سیدنی)           | `Australia/Sydney`               |
-| آسیا و اقیانوسیه | استرالیا (پرت)             | `Australia/Perth`                |
-| آسیا و اقیانوسیه | نیوزلند (آوکلند)           | `Pacific/Auckland`               |
-| آفریقا           | مصر (قاهره)                | `Africa/Cairo`                   |
-| آفریقا           | آفریقای جنوبی (ژوهانسبورگ) | `Africa/Johannesburg`            |
-| آفریقا           | نیجریه (لاگوس)             | `Africa/Lagos`                   |
-| آفریقا           | کنیا (نایروبی)             | `Africa/Nairobi`                 |
+| Middle East      | Iran                       | `Asia/Tehran`                    |
+| Middle East      | Türkiye                    | `Europe/Istanbul`                |
+| Middle East      | Saudi Arabia               | `Asia/Riyadh`                    |
+| Middle East      | United Arab Emirates       | `Asia/Dubai`                     |
+| Middle East      | Qatar                      | `Asia/Qatar`                     |
+| Middle East      | Iraq                       | `Asia/Baghdad`                   |
+| Middle East      | Israel                     | `Asia/Jerusalem`                 |
+| Europe           | United Kingdom (London)    | `Europe/London`                  |
+| Europe           | Germany (Berlin)           | `Europe/Berlin`                  |
+| Europe           | France (Paris)             | `Europe/Paris`                   |
+| Europe           | Italy (Rome)               | `Europe/Rome`                    |
+| Europe           | Spain (Madrid)             | `Europe/Madrid`                  |
+| Europe           | Netherlands (Amsterdam)    | `Europe/Amsterdam`               |
+| Europe           | Sweden (Stockholm)         | `Europe/Stockholm`               |
+| Europe           | Norway (Oslo)              | `Europe/Oslo`                    |
+| Europe           | Russia (Moscow)            | `Europe/Moscow`                  |
+| Americas         | USA – East (New York)      | `America/New_York`               |
+| Americas         | USA – Central (Chicago)    | `America/Chicago`                |
+| Americas         | USA – Mountain (Denver)    | `America/Denver`                 |
+| Americas         | USA – West (Los Angeles)   | `America/Los_Angeles`            |
+| Americas         | Canada – East (Toronto)    | `America/Toronto`                |
+| Americas         | Canada – West (Vancouver)  | `America/Vancouver`              |
+| Americas         | Brazil (São Paulo)         | `America/Sao_Paulo`              |
+| Americas         | Argentina (Buenos Aires)   | `America/Argentina/Buenos_Aires` |
+| Americas         | Mexico (Mexico City)       | `America/Mexico_City`            |
+| Asia-Pacific     | India (Kolkata)            | `Asia/Kolkata`                   |
+| Asia-Pacific     | Pakistan (Karachi)         | `Asia/Karachi`                   |
+| Asia-Pacific     | China (Shanghai)           | `Asia/Shanghai`                  |
+| Asia-Pacific     | Hong Kong                  | `Asia/Hong_Kong`                 |
+| Asia-Pacific     | Japan (Tokyo)              | `Asia/Tokyo`                     |
+| Asia-Pacific     | South Korea (Seoul)        | `Asia/Seoul`                     |
+| Asia-Pacific     | Singapore                  | `Asia/Singapore`                 |
+| Asia-Pacific     | Indonesia (Jakarta)        | `Asia/Jakarta`                   |
+| Asia-Pacific     | Australia (Sydney)         | `Australia/Sydney`               |
+| Asia-Pacific     | Australia (Perth)          | `Australia/Perth`                |
+| Asia-Pacific     | New Zealand (Auckland)     | `Pacific/Auckland`               |
+| Africa           | Egypt (Cairo)              | `Africa/Cairo`                   |
+| Africa           | South Africa (Johannesburg)| `Africa/Johannesburg`           |
+| Africa           | Nigeria (Lagos)            | `Africa/Lagos`                   |
+| Africa           | Kenya (Nairobi)            | `Africa/Nairobi`                 |
+
+</div>
 
 </details>
 
 - **پشتیبانی از چند توزیع لینوکس**
-  - تشخیص خودکار پکیج منیجر (`apt`, `dnf`, `yum`, `pacman`)
-  - نصب اتوماتیک ابزارهای مورد نیاز (`curl`, `zip`, `cron` و …)
+  - تشخیص خودکار پکیج منیجر  
+    <span dir="ltr">`apt`, `dnf`, `yum`, `pacman`</span>
+  - نصب اتوماتیک ابزارهای مورد نیاز  
+    <span dir="ltr">`curl`, `zip`, `cron` و …</span>
 
 ## قالب‌های پشتیبانی‌شده
 
 NovaBackuper عمداً مینیمال و تخصصی طراحی شده:
 
-- [x] **پنل x-ui** (دیتابیس SQLite در مسیر `/etc/x-ui`)
+- [x] **پنل x-ui** (دیتابیس SQLite در مسیر <span dir="ltr">`/etc/x-ui`</span>)
 
 همچنین در مراحل نصب می‌توانید **دایرکتوری‌های دلخواه** را اضافه یا حذف کنید تا همراه دیتابیس، مسیرهای دیگر هم داخل فایل بکاپ قرار بگیرند.
 
@@ -119,9 +128,13 @@ NovaBackuper عمداً مینیمال و تخصصی طراحی شده:
 
 برای نصب آخرین نسخه، این دستور را اجرا کنید:
 
+<div dir="ltr" align="left">
+
 ```bash
 sudo bash -c "$(curl -sL https://github.com/power0matin/NovaBackuper/raw/master/nova-backuper.sh)"
 ````
+
+</div>
 
 این اسکریپت کارهای زیر را انجام می‌دهد:
 
@@ -136,29 +149,45 @@ sudo bash -c "$(curl -sL https://github.com/power0matin/NovaBackuper/raw/master/
 
 بعد از نصب، معمولاً اسکریپت ساخته‌شده این شکلی است:
 
+<div dir="ltr" align="left">
+
 ```bash
 /root/_<remark>_backuper_script.sh
 ```
 
+</div>
+
 کران‌جاب هم شبیه این خواهد بود (مثلاً هر ۳۰ دقیقه):
+
+<div dir="ltr" align="left">
 
 ```cron
 */30 * * * * /root/_myxui_backuper_script.sh
 ```
 
+</div>
+
 شما می‌توانید:
 
 * برای ویرایش یا حذف کران‌جاب:
+
+  <div dir="ltr" align="left">
 
   ```bash
   crontab -e
   ```
 
+  </div>
+
 * برای اجرای دستی بکاپ:
+
+  <div dir="ltr" align="left">
 
   ```bash
   bash /root/_<remark>_backuper_script.sh
   ```
+
+  </div>
 
 ## 💙 حمایت از پروژه
 
